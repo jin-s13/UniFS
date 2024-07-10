@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This repo contains the official PyTorch implementation of our ICCV paper
+This repo contains the official PyTorch implementation of our ECCV'2024 paper
 [UniFS: Universal Few-shot Instance Perception with Point Representations](https://arxiv.org/abs/2404.19401).
 
 <div align="center"><img src="assets/arch.png" width="800"></div>
