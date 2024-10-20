@@ -5,6 +5,9 @@
 This repo contains the official PyTorch implementation of our ECCV'2024 paper
 [UniFS: Universal Few-shot Instance Perception with Point Representations](https://arxiv.org/abs/2404.19401).
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/unifs-universal-few-shot-instance-perception/few-shot-object-detection-on-ms-coco-5-shot)](https://paperswithcode.com/sota/few-shot-object-detection-on-ms-coco-5-shot?p=unifs-universal-few-shot-instance-perception)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/unifs-universal-few-shot-instance-perception/few-shot-object-detection-on-ms-coco-1-shot)](https://paperswithcode.com/sota/few-shot-object-detection-on-ms-coco-1-shot?p=unifs-universal-few-shot-instance-perception)
+
 <div align="center"><img src="assets/arch.png" width="800"></div>
 
 ## Data Preparation
@@ -33,6 +36,18 @@ The dataset split follows [DeFRCN](https://github.com/er-muyue/DeFRCN).
       tools
       ...
     ```
+## Training and Evaluation
+
+* To reproduce the FSIS/gFSIS results on COCO
+  ```angular2html
+  bash run/run_unify.sh r101 dcfs 8
+  
+## Visualization Results 
+The baseline DeFRCN may tend to incorrectly recognize positive object as background (middle two rows) due to the biased classification. This problem is greatly alleviated using our proposed method (DCFS).
+<div align="center"><img src="assets/vis.png" width="800"></div>
+<div align="center"><img src="assets/vis_ablation.png" width="800"></div>
+
+
 
 ## Acknowledgement
 This repo is developed based on [DCFS](https://github.com/gaobb/DCFS), [DeFRCN](https://github.com/er-muyue/DeFRCN) and [Detectron2](https://github.com/facebookresearch/detectron2). 

@@ -1,0 +1,1 @@
+python demo/demo.py --config-file configs/deform_coco/dcfs_det_r101_base.yaml --input datasets/coco/val2014/ --output coco_show --opts MODEL.WEIGHTS deform_model_final.pth

@@ -1,0 +1,25 @@
+_BASE_: "./Base-RCNN.yaml"
+MODEL:
+  WEIGHTS: "/Path/to/ImageNet/Pretrain/Weight"
+  MASK_ON: False
+  RESNETS:
+    DEPTH: 101
+  RPN:
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.0
+  ROI_HEADS:
+    NUM_CLASSES: 60
+    ENABLE_DECOUPLE: True
+    BACKWARD_SCALE: 0.75
+DATASETS:
+  TRAIN: ("unify_trainval_base",)
+  TEST: ('unify_test_base',)
+  MODEL_INIT: ('unify_trainval_base_10shot_seed1',)
+SOLVER:
+  IMS_PER_BATCH: 32
+  BASE_LR: 0.028
+  STEPS: (45000, 50000)
+  MAX_ITER: 55001
+OUTPUT_DIR: "/Path/to/Output/Dir"
+DATALOADER:
+  NUM_WORKERS: 0
